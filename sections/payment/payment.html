@@ -1,0 +1,95 @@
+<template class="section-template">
+    <section id="payment-section" class="section js-section">
+        <header class="section-header">
+            <div class="section-wrapper">
+                <h1>
+                    <img style="height: 36px; width: 36px" src="assets/img/dollar+funds+hand+payment+icon+icon-1320086640827007356.png">
+                    Create and Manage Windows
+                </h1>
+                <!--
+                <h3>The <code>BrowserWindow</code> module in Electron allows you to create a new browser window or manage an existing one.</h3>
+
+                <p>Each browser window is a separate process, known as the renderer process. This process, like the main process that controls the life cycle of the app, has full access to the Node.js APIs.
+
+                <p>Open the <a href="http://electron.atom.io/docs/api/browser-window">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+                -->
+            </div>
+        </header>
+        <div class="payment-content-wrapper">
+            <div class="demo">
+                <div class="demo-content-33-width">
+                    <span></span>
+                    <input type="text" id="myInput" class="scan-field" onblur="this.focus()" placeholder="Title..." autofocus>
+                </div>
+                <div class="demo-separator-column"></div>
+                <div class="demo-content">
+                    <div class="order-summary-wrapper">
+                        <h2>SDSDSD</h2>
+                        <div class="order-summary-wrapper2">
+                            <div id="order-summary-content">
+                                <span><em>No item</em></span>
+                            </div>
+                            <div class="order-summary-fee-promotion">
+                                <strong>GIAGOC CONG</strong>
+                                <span>12354354</span>
+                            </div>
+                            <hr style="border-top: 3px dashed #bbb">
+                            <div class="order-summary-fee-promotion">
+                                <span><strong>KHUYENMAI</strong></span>
+                                <span>15000</span>
+                            </div>
+                            <div class="order-summary-sum-price">
+                                <strong>TPMNG CONG</strong>
+                                <span class="order-sum-price">12354354</span>
+                            </div>
+                            <div class="order-summary-sum-price">
+                                <strong>KHACHDUA</strong>
+                                <span>12354354</span>
+                            </div>
+                            <div class="order-summary-sum-price">
+                                <strong>TIENTHOI</strong>
+                                <span class="order-sum-price">12354354</span>
+                            </div>
+
+                            <button id="process-payment-button">THANHTOAN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script id="update-quantity-addition" type="text/x-custom-template">
+            <div style="display: flex; margin-bottom: 0.5rem">
+                <div class="order-item">
+                    <span id="item-name"></span>
+                    <span id="item-price"></span>
+                    <div class="order-item-quantity-wrapper">
+                        <span id="order-item-increase-quantity" class="update-quantity-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </span>
+                        <span id="order-item-quantity">1</span>
+                        <span id="order-item-decrease-quantity" class="update-quantity-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script id="update-quantity-subtraction" type="text/x-custom-template">
+            <div style="display: flex">
+                <div class="order-item">
+                    <span class="update-quantity-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </span>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/javascript">
+            require('./assets/js/payment')
+        </script>
+
+    </section>
+</template>

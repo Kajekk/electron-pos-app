@@ -1,0 +1,66 @@
+<html>
+<head>
+    <style>
+        .line-field-create-product {
+            display: inline-block;
+        }
+        .line-field-create-product * {
+            margin: 10px;
+        }
+        .field-create-product-wrapper {
+            border: 1px solid #bbbbbb;
+        }
+    </style>
+</head>
+
+<body>
+<div class="demo-content">
+    <div class="order-summary-wrapper">
+        <h2>SDSDSD</h2>
+        <form class="form-create-product">
+            <div class="field-create-product-wrapper">
+                <div class="line-field-create-product">
+                    <label>Name</label>
+                    <input type="text" id="create-product-name-field">
+                </div>
+                <br>
+                <div class="line-field-create-product">
+                    <label>Product Code</label>
+                    <input type="text" id="create-product-code-field">
+                </div>
+                <br>
+                <div class="line-field-create-product">
+                    <label>Barcode</label>
+                    <input type="text" id="create-product-barcode-field">
+                </div>
+                <br>
+                <div class="line-field-create-product">
+                    <label>Price</label>
+                    <input type="text" id="create-product-price-field">
+                </div>
+                <br>
+                <div class="line-field-create-product">
+                    <label>Quantity</label>
+                    <input type="text" id="create-product-quantity-field">
+                </div>
+            </div>
+        </form>
+        <button id="submit-create-product-btn">Submit</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('submit-create-product-btn').addEventListener('click', (event) => {
+        let productData = {
+            name: document.getElementById('create-product-name-field').value,
+            productCode: document.getElementById('create-product-code-field').value,
+            barcode: document.getElementById('create-product-barcode-field').value,
+            price: parseInt(document.getElementById('create-product-price-field').value),
+            quantity: parseInt(document.getElementById('create-product-quantity-field').value),
+        };
+        require('electron').ipcRenderer.send('submitCreateProduct', productData);
+        window.close()
+    });
+</script>
+</body>
+</html>

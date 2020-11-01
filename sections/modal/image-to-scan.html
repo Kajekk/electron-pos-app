@@ -1,0 +1,60 @@
+<html>
+<head>
+    <style>
+        @page {
+            size: auto;   /* auto is the initial value */
+            margin: 0;  /* this affects the margin in the printer settings */
+            height: auto !important;
+            width: 70mm !important;
+        }
+
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            left: 0;
+            top: 0;
+            background: #eee !important;
+            font-family: 'Tahoma', 'Segoe UI Light', 'Segoe UI', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Verdana, sans-serif !important;
+            /*visibility: hidden;*/
+            height: auto !important;
+            width: 140mm !important;
+            overflow: visible !important;
+        }
+
+        #print {
+            display: block;
+            left: 0;
+            top: 0;
+            visibility: initial !important;
+            padding: 1px !important;
+            background: white;
+            border: none;
+            outline: none;
+            margin-left: 5mm;
+            height: auto !important;
+            width: 140mm !important;
+            overflow: visible !important;
+        }
+    </style>
+</head>
+
+<body>
+<div id="print">
+    <img id="barcode"/>
+    <!--<img style="margin-left: 50px" id="barcode"/> -->
+</div>
+
+<script>
+    require('jsbarcode');
+    require('electron').ipcRenderer.on('item-code', (event, message) => {
+        console.log(message);
+        JsBarcode('#barcode', message, {
+            fontSize: 30,
+            fontOptions: "bold",
+            marginLeft: 30,
+            width: 2
+        });
+    })
+</script>
+</body>
+</html>

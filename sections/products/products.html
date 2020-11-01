@@ -1,0 +1,33 @@
+<template class="section-template">
+    <section id="products-section" class="section js-section">
+        <header class="section-header">
+            <div class="section-wrapper">
+                <h1>
+                    <img style="height: 36px; width: 36px" src="assets/img/dollar+funds+hand+payment+icon+icon-1320086640827007356.png">
+                    Create and Manage Windows
+                </h1>
+                <button id="create-product-btn" class="demo-button">Create Product</button>
+            </div>
+        </header>
+
+        <div class="payment-content-wrapper">
+            <div class="demo">
+                <div id="products-wrapper" class="products-wrapper">
+
+                </div>
+            </div>
+        </div>
+
+        <button class="demo-button new-window" id="SP00001" data-item-code="SP00001">ADSASD</button>
+
+        <script id="product-item-template" type="text/x-custom-template">
+            <button class="demo-button new-window" id="item-product-code" data-item-code="item-product-code">ADSASD</button>
+        </script>
+
+        <script type="text/javascript">
+            require('./assets/js/products');
+            require('./renderer-process/create-product');
+            require('./renderer-process/print-barcode')
+        </script>
+    </section>
+</template>
