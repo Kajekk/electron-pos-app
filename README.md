@@ -1,9 +1,5 @@
 # electron-pos-app
 
-> npm install
-> npm run dev
-> npm run start
-
 - Todo list
   - [ ] Button Confirm Payment
   - [ ] Improve UI Page Products => Sort list by categories, alphabetical, price
