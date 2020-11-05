@@ -1,17 +1,15 @@
 import * as React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import FooView from "./views/FooView";
-import BarView from "./views/BarView";
-import { Layout } from "./views/Layout";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./styles/main.scss";
+import Home from "./views/Home";
+import { Layout } from "./views/Layout";
 
 export default function App() {
     return (
         <BrowserRouter>
             <Layout>
                 <Switch>
-                    <Route path="/bar" component={BarView} />
-                    <Route exact path="/" component={FooView} />
+                    <Route exact path="/" component={Home} />
                     <Redirect from="*" to="/" />
                 </Switch>
             </Layout>

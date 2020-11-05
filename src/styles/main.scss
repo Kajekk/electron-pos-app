@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    padding: 0px 16px;
-    min-height: 100%;
+    // min-height: 100% - 16px;
+    color: #ececec;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -53,7 +53,6 @@ button {
         }
     }
     .body {
-        padding: 16px;
         min-height: 600px;
         grid-column: 2;
         background-color: $color3;
@@ -65,4 +64,8 @@ button {
         background-color: $color2;
         color: $color3;
     }
+}
+#root {
+    height: calc(100vh - 16px);
+    background-color: #ececec;
 }
