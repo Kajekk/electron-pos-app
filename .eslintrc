@@ -1,0 +1,18 @@
+{
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error"
+  },
+  "ignorePatterns": ["brand.js", "env.js", "test-1.js", "dev.js", "prod.js", "stag.js"]
+}
